@@ -1,0 +1,15 @@
+<app-header
+  title="Cosas lindas"
+  type="back"
+  cssClass="header_lindas"
+></app-header>
+
+<ion-content class="ion-padding background_lindas">
+  <app-fotos-lista tipo="CosasLindas"></app-fotos-lista>
+
+  <ion-fab vertical="bottom" horizontal="end" slot="fixed">
+    <ion-fab-button routerLink="../camara/CosasLindas">
+      <ion-icon name="camera-outline"></ion-icon>
+    </ion-fab-button>
+  </ion-fab>
+</ion-content>

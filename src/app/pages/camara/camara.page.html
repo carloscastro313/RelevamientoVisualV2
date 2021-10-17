@@ -1,0 +1,23 @@
+<app-header type="back" title="Subir fotos"></app-header>
+
+<ion-content class="ion-padding background_normal">
+  <app-foto
+    [src]="foto.img"
+    [index]="i"
+    (delete)="deleteFoto($event)"
+    *ngFor="let foto of fotos; let i=index"
+  ></app-foto>
+</ion-content>
+<ion-footer>
+  <ion-toolbar>
+    <ion-title>Fotos: {{fotos.length}}</ion-title>
+    <ion-buttons slot="end">
+      <ion-button (click)="addFoto()">
+        <ion-icon name="add"></ion-icon>
+      </ion-button>
+      <ion-button (click)="upload()">
+        <ion-icon name="cloud-upload-outline"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-footer>

@@ -1,0 +1,12 @@
+<app-header title="Listado de fotos" type="back"></app-header>
+<ion-content class="ion-padding background_normal">
+  <ion-grid fixed>
+    <ion-spinner name="dots" *ngIf="complete"></ion-spinner>
+
+    <ion-row>
+      <ion-col size="3" *ngFor="let foto of fotos">
+        <img [src]="foto.url" [alt]="foto.tipo" (click)="detalle(foto.id)" />
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+</ion-content>

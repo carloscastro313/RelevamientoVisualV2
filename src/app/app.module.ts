@@ -6,12 +6,29 @@ import { IonicModule, IonicRouteStrategy } from '@ionic/angular';
 
 import { AppComponent } from './app.component';
 import { AppRoutingModule } from './app-routing.module';
+import { LoginModule } from './login/login.module';
+import { UtilityModule } from './utility/utility.module';
+import { File } from '@ionic-native/file/ngx';
+import { Device } from '@ionic-native/device/ngx';
+import { Base64 } from '@ionic-native/base64/ngx';
 
 @NgModule({
   declarations: [AppComponent],
   entryComponents: [],
-  imports: [BrowserModule, IonicModule.forRoot(), AppRoutingModule],
-  providers: [{ provide: RouteReuseStrategy, useClass: IonicRouteStrategy }],
+  imports: [
+    BrowserModule,
+    IonicModule.forRoot(),
+    AppRoutingModule,
+    LoginModule,
+    UtilityModule,
+  ],
+  exports: [],
+  providers: [
+    { provide: RouteReuseStrategy, useClass: IonicRouteStrategy },
+    File,
+    Device,
+    Base64,
+  ],
   bootstrap: [AppComponent],
 })
 export class AppModule {}

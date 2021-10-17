@@ -1,0 +1,22 @@
+#login {
+  background-color: rgba(255, 255, 255, 0.2);
+  height: auto;
+  padding: 20px;
+  border-radius: 5px;
+
+  form {
+    margin-top: 50px;
+    margin-bottom: 25px;
+    ion-item {
+      border-radius: 7px !important;
+      margin: 5px 0px;
+    }
+  }
+}
+
+ion-fab-list {
+  ion-fab-button {
+    width: 4em !important;
+    height: 4em !important;
+  }
+}

@@ -1,0 +1,28 @@
+<div *ngIf="loading" id="detalle">
+  <img [src]="foto.url" />
+  <div id="info">
+    <ion-text class="who">
+      <h5>Fue publicado por: {{ foto.correo }}</h5>
+    </ion-text>
+    <ion-grid fixed>
+      <ion-row>
+        <ion-col size="8">
+          <ion-text>
+            <h5>Fecha: {{ foto.time | date }}</h5>
+          </ion-text>
+        </ion-col>
+        <ion-col size="4"
+          ><ion-button
+            (click)="fotos.likeFoto(foto.id, foto.like)"
+            *ngIf="isLikeable"
+          >
+            <ion-icon
+              slot="icon-only"
+              [name]="fotos.isLike(foto.like) ? 'heart' : 'heart-outline'"
+            ></ion-icon> </ion-button
+        ></ion-col>
+      </ion-row>
+    </ion-grid>
+  </div>
+</div>
+<ion-spinner name="dots" *ngIf="!loading"></ion-spinner>

@@ -16,7 +16,7 @@
 @import "~@ionic/angular/css/normalize.css";
 @import "~@ionic/angular/css/structure.css";
 @import "~@ionic/angular/css/typography.css";
-@import '~@ionic/angular/css/display.css';
+@import "~@ionic/angular/css/display.css";
 
 /* Optional CSS utils that can be commented out */
 @import "~@ionic/angular/css/padding.css";
@@ -24,3 +24,22 @@
 @import "~@ionic/angular/css/text-alignment.css";
 @import "~@ionic/angular/css/text-transformation.css";
 @import "~@ionic/angular/css/flex-utils.css";
+.background_normal {
+  --background: linear-gradient(#d7b4d4, #eb92e3) !important;
+}
+
+.background_lindas {
+  --background: linear-gradient(#d7b4d4, #e6a9ad) !important;
+}
+
+.background_feas {
+  --background: linear-gradient(#d7b4d4, #6d3e94) !important;
+}
+
+.header_feas {
+  --ion-color-base: #6d3e94 !important;
+}
+
+.header_lindas {
+  --ion-color-base: #e6a9ad !important;
+}
